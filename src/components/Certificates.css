@@ -1,0 +1,80 @@
+/* Certificates.css */
+.certificates-page {
+  padding: 6rem 2rem 4rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(180, 245, 255, 0.8), rgba(160, 230, 255, 0.7)),
+    url('https://grainy-gradients.vercel.app/noise.svg');
+  background-blend-mode: overlay;
+  background-size: cover;
+  color: #333;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.certificates-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+}
+
+.certificates-title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #0db9d7;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.certificates-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.certificate-card {
+  background: rgba(248, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+}
+
+.certificate-card h3 {
+  font-size: 1.1rem;
+  color: #222;
+  margin: 0.5rem 0;
+}
+
+.certificate-card p {
+  color: #666;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,288 @@
+.about-page {
+  padding: 6rem 2rem 4rem 2rem;
+  /* padding: 4rem 2rem; */
+  padding-top: 120px; 
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(180, 245, 255, 0.8), rgba(160, 230, 255, 0.7)), 
+              url('https://grainy-gradients.vercel.app/noise.svg');
+  background-blend-mode: overlay;
+  background-size: cover;
+  color: #333;
+  box-sizing: border-box;
+  
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #00bcd4;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: transform 0.4s ease, text-shadow 0.4s ease, color 0.4s ease;
+  text-shadow: 0 4px 10px rgba(0, 188, 212, 0.4); /* subtle glow effect */
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -10px;
+  background-color: #00bcd4;
+  transition: background-color 0.4s ease;
+}
+
+.about-title:hover {
+  color: #007e8c;                    /* subtle color shift on hover */
+  transform: scale(1.05);            /* slight pop-out on hover */
+  text-shadow: 0 8px 20px rgba(0, 126, 140, 0.6); /* stronger glow on hover */
+}
+
+.about-title:hover::after {
+  background-color: #005d6b;         /* darker underline on hover */
+}
+
+.bio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;                 /* stack vertically on smaller screens */
+  max-width: 1100px;
+  margin: 0 auto 4rem;             /* center horizontally with bottom margin */
+}
+
+.bio-description {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bio-description:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.bio-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;              
+  object-position: top center;    /* keeps your head centered */
+  border-radius: 50%;             /* circular image */
+  border: 4px solid #00bcd4;      /* optional accent border */
+  transition: transform 0.4s ease;
+}
+
+.bio-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-photo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeUp 1.2s forwards;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); 
+  max-width: 1100px;  /* ADD THIS */
+  margin: 0 auto;     /* Center the cards */
+  padding: 2rem 1rem; /* Add spacing around cards */
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeUp 1.4s forwards;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* spacing between lines */
+}
+
+.card-icon {
+  color: #00bcd4;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.about-card p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.about-card:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.about-card svg:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.about-card h2 {
+  margin-top: 0;
+  color: #00bcd4;
+}
+
+
+/* Styling For Experience Card */
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.location {
+  font-style: italic;
+  color: #666;
+}
+
+.experience-points {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.experience-points li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cards {
+    grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+  }
+}
+
+
+/* Code for Achievement card */
+
+.achievement-intro {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.achievement-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.achievement-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-list li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+}
+
+.cert-heading {
+  margin-top: 1.5rem;
+  color: #00bcd4;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.certification-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  background-color: #e0f7fa;
+  color: #007c91;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Skill Card */
+
+.skill-section {
+  margin-bottom: 1.5rem;
+}
+
+.skill-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #e0f7fa;
+  color: #007c91;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #b2ebf2;
+  transform: scale(1.05);
+}
